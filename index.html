@@ -17,26 +17,19 @@
 <body>
 <h1>Atendimento teste POC 0.1</h1>
 
-<script>
-    (function(h,i,b,o,t) {
+<div class="botWMB" style="position: fixed; bottom: 0px !important;">
+    <script>
+      (function(h,i,b,o,t) {
         h.onload = function() {
-            if(window.HiBot !== undefined) return true;
-            var s = i.createElement('script');
-            s.src = b + o;
-            s.async = true;
-            s.id = t;
-            i.body.appendChild(s);
-            s.onload = function() {
-                window.HiBot.onStart = function() {
-                    /*Código a ser executado após iniciar o HiBot com o método HiBot.start() ou via "Iniciar atendimento automaticamente" */
-                };
-                window.HiBot.fillSurvey = function(fields) {
-                    /*Código a ser executado antes do "Bot Ativo" para preencher os campos de maneira dinâmica */
-                        return fields;
-                };
-            }
+          if(window.HiBot !== undefined) return true;
+          var s = i.createElement('script');
+          s.src = b + o;
+          s.async = true;
+          s.id = t;
+          i.body.appendChild(s);
         };
-    })(window, document, '//cdn-bot.hiplatform.com/dtbot.js?token=a6193f39-7c5d-42a1-818f-bab28a1d6308', '&widget=true&tab=true&top=40&text=Alguma%20d%C3%BAvida%3F&textcolor=ffffff&bgcolor=F7A723&from=right&widgetType=baloon&iconId=&mobilelink=true&initParams=%7B%22nome_usuario%22%3A%22vazio%22%2C%22email%22%3A%22vazio%40vazio.com%22%7D&automatic=true', 'dtbot-script');
-    </script>
+      })(window, document, '//cdn-bot.hiplatform.com/dtbot.js?token=a6193f39-7c5d-42a1-818f-bab28a1d6308', '&initParams=%7B%22nome_usuario%22%3A%22vazio%22%2C%22email%22%3A%22vazio%40vazio.com%22%7D&automatic=true&automaticBg=true', 'dtbot-script');
+      </script>
+        </div>
 </body>
 </html>
